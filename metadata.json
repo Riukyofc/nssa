@@ -1,6 +1,0 @@
-{
-  "name": "NSSA - Esports Management",
-  "description": "High-end landing page for an online gaming betting organization management system and mobile app.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
