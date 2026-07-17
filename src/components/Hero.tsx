@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { ArrowRight, Bot, Server, Swords, Trophy } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-function useAnimatedCounter(end: number, duration: number = 2000, prefix: string = '', suffix: string = '') {
+function AnimatedCounter({ end, duration = 2000, prefix = '', suffix = '' }: { end: number, duration?: number, prefix?: string, suffix?: string }) {
   const [count, setCount] = useState(0);
   const countRef = useRef(0);
   const nodeRef = useRef<HTMLDivElement>(null);
@@ -101,17 +101,17 @@ export function Hero() {
 
           <div className="flex flex-wrap items-center gap-x-8 gap-y-4 pt-8 mt-4 border-t border-white/10">
             <div className="flex flex-col">
-              {useAnimatedCounter(200, 2000, '', '+')}
+              <AnimatedCounter end={200} duration={2000} suffix="+" />
               <span className="text-xs text-gray-500 uppercase tracking-wider mt-1">Servidores</span>
             </div>
             <div className="w-px h-10 bg-white/10 hidden sm:block" />
             <div className="flex flex-col">
-              {useAnimatedCounter(50, 2000, '', 'K+')}
+              <AnimatedCounter end={50} duration={2000} suffix="K+" />
               <span className="text-xs text-gray-500 uppercase tracking-wider mt-1">Partidas</span>
             </div>
             <div className="w-px h-10 bg-white/10 hidden sm:block" />
             <div className="flex flex-col">
-              {useAnimatedCounter(500, 2000, 'R$ ', 'K+')}
+              <AnimatedCounter end={500} duration={2000} prefix="R$ " suffix="K+" />
               <span className="text-xs text-gray-500 uppercase tracking-wider mt-1">Movimentados</span>
             </div>
           </div>
