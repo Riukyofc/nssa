@@ -1,10 +1,9 @@
 import { motion } from "motion/react";
-import { Twitter, Instagram, MessageCircle } from "lucide-react";
+import { MessageCircle, ShoppingBag, Shield } from "lucide-react";
 
 export function Footer() {
   return (
     <footer className="relative bg-[#050505] pt-24 pb-8 border-t border-white/5">
-      {/* Top Gradient Divider */}
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-emerald-500/40 to-transparent" />
       
       <div className="max-w-7xl mx-auto px-6">
@@ -22,11 +21,11 @@ export function Footer() {
                 <div className="text-3xl font-black italic tracking-tighter text-white flex items-center font-display">
                   N<span className="text-emerald-500" style={{ textShadow: '0 0 20px rgba(16,185,129,0.5)' }}>SS</span>A
                 </div>
-                <div className="text-[10px] tracking-[0.2em] text-emerald-500/80 mt-0.5 uppercase font-bold">E-SPORTS APP</div>
+                <div className="text-[10px] tracking-[0.2em] text-emerald-500/80 mt-0.5 uppercase font-bold">DISCORD BOT</div>
               </div>
               <p className="text-sm text-gray-500 leading-relaxed max-w-sm">
-                O sistema operacional premium para organizações de apostas em esports.
-                Domine o cenário T2 e T3 com tecnologia de elite e gestão inteligente.
+                O bot definitivo para gestão de apostas e salas automáticas no Discord.
+                Transforme sua comunidade de Free Fire em uma organização profissional.
               </p>
             </div>
             
@@ -34,7 +33,7 @@ export function Footer() {
             <div className="md:col-span-2">
               <h4 className="font-bold mb-6 text-white text-sm uppercase tracking-wider">Produto</h4>
               <ul className="flex flex-col gap-4">
-                {['Features', 'VIP', 'Changelog', 'App Mobile'].map(item => (
+                {['Recursos', 'Modos suportados', 'Pacotes de Salas', 'Sites Exclusivos'].map(item => (
                   <li key={item}>
                     <a href="#" className="text-sm text-gray-500 hover:text-emerald-400 transition-colors hover-underline pb-1 w-fit">
                       {item}
@@ -48,7 +47,7 @@ export function Footer() {
             <div className="md:col-span-2">
               <h4 className="font-bold mb-6 text-white text-sm uppercase tracking-wider">Legal</h4>
               <ul className="flex flex-col gap-4">
-                {['Termos de Uso', 'Privacidade', 'Cookies'].map(item => (
+                {['Termos de Uso', 'Privacidade', 'Reembolsos'].map(item => (
                   <li key={item}>
                     <a href="#" className="text-sm text-gray-500 hover:text-emerald-400 transition-colors hover-underline pb-1 w-fit">
                       {item}
@@ -58,15 +57,15 @@ export function Footer() {
               </ul>
             </div>
             
-            {/* Comunidade Column */}
+            {/* Suporte Column */}
             <div className="md:col-span-3">
-              <h4 className="font-bold mb-6 text-white text-sm uppercase tracking-wider">Comunidade</h4>
+              <h4 className="font-bold mb-6 text-white text-sm uppercase tracking-wider">Suporte</h4>
               <div className="flex gap-4">
                 <a href="#" className="w-10 h-10 rounded-xl bg-white/5 border border-white/[0.06] flex items-center justify-center text-gray-400 hover:text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
-                  <Twitter className="w-5 h-5" />
+                  <Shield className="w-5 h-5" />
                 </a>
                 <a href="#" className="w-10 h-10 rounded-xl bg-white/5 border border-white/[0.06] flex items-center justify-center text-gray-400 hover:text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
-                  <Instagram className="w-5 h-5" />
+                  <ShoppingBag className="w-5 h-5" />
                 </a>
                 <a href="#" className="w-10 h-10 rounded-xl bg-white/5 border border-white/[0.06] flex items-center justify-center text-gray-400 hover:text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
                   <MessageCircle className="w-5 h-5" />
@@ -78,7 +77,7 @@ export function Footer() {
           
           {/* Bottom Bar */}
           <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
-            <p className="text-sm text-gray-600 font-medium">© 2026 NSSA E-Sports App. Todos os direitos reservados.</p>
+            <p className="text-sm text-gray-600 font-medium">© 2026 NSSA Bot. Todos os direitos reservados.</p>
             
             {/* Uptime Indicator */}
             <div className="flex items-center gap-4 bg-white/5 px-4 py-2 rounded-full border border-white/5">
@@ -87,10 +86,10 @@ export function Footer() {
                   <span className="absolute inset-0 rounded-full bg-emerald-500 animate-ping opacity-75" />
                   <span className="relative rounded-full w-2 h-2 bg-emerald-400" />
                 </div>
-                <span className="text-xs text-gray-400 font-bold uppercase tracking-wider">Sistemas Ativos</span>
+                <span className="text-xs text-gray-400 font-bold uppercase tracking-wider">Bot 100% Online</span>
               </div>
               <div className="w-16 h-1 rounded-full bg-white/10 overflow-hidden">
-                <div className="w-[98%] h-full bg-gradient-to-r from-emerald-500 to-green-400 rounded-full" />
+                <div className="w-[99%] h-full bg-gradient-to-r from-emerald-500 to-green-400 rounded-full" />
               </div>
             </div>
           </div>

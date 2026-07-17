@@ -1,10 +1,9 @@
 import { motion } from "motion/react";
-import { Apple, Play, Shield, Smartphone } from "lucide-react";
+import { LayoutDashboard, Globe, Settings, Wallet, Users, History, Activity, Terminal } from "lucide-react";
 
 export function AppShowcase() {
   return (
-    <section id="o-app" className="py-32 relative overflow-hidden bg-[#020202]">
-      {/* Top and Bottom Glow Lines */}
+    <section id="paineis" className="py-32 relative overflow-hidden bg-[#020202]">
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-emerald-400/40 to-transparent" />
       <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-emerald-500/40 to-transparent" />
       
@@ -19,26 +18,27 @@ export function AppShowcase() {
             className="flex flex-col gap-6"
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/5 backdrop-blur-sm w-fit mb-2">
-              <Smartphone className="w-3 h-3 text-emerald-400" />
-              <span className="text-[10px] font-bold text-emerald-300 uppercase tracking-widest">App Nativo</span>
+              <LayoutDashboard className="w-3 h-3 text-emerald-400" />
+              <span className="text-[10px] font-bold text-emerald-300 uppercase tracking-widest">Painéis & Sites</span>
             </div>
 
             <h2 className="text-4xl md:text-6xl font-display font-bold leading-[1.1] text-white">
-              O poder do NSSA <br />
-              <span className="text-gradient">no seu bolso.</span>
+              Controle total, <br />
+              <span className="text-gradient">dentro e fora do Discord.</span>
             </h2>
+            
             <p className="text-lg text-gray-400 leading-relaxed max-w-lg">
-              Nosso aplicativo nativo foi desenhado do zero para velocidade. 
-              Receba alertas de picks, gerencie o caixa da org e envie pagamentos para os analistas
-              com um clique, direto do celular.
+              Oferecemos painéis interativos em botões para jogadores, staff e donos gerenciarem
+              tudo sem digitar comandos. E para expandir sua marca, criamos dashboards web e
+              landing pages exclusivas para sua organização.
             </p>
             
             <ul className="flex flex-col gap-5 mt-4">
               {[
-                "Notificações ultra-rápidas (Push)",
-                "Modo escuro otimizado para OLED",
-                "Biometria para aprovar transações",
-                "Chat interno seguro para a Org"
+                "Painéis segmentados: Jogador, Mediador, Staff e Dono",
+                "Tudo clicável: perfil, carteira, loja, licenças e logs",
+                "Dashboard Web complementar para a gestão da org",
+                "Landing page personalizada para vender seus serviços VIP"
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-4 text-gray-300">
                   <div className="w-7 h-7 rounded-full bg-emerald-500/15 border border-emerald-500/20 flex items-center justify-center shrink-0">
@@ -49,100 +49,107 @@ export function AppShowcase() {
               ))}
             </ul>
 
-            {/* Download Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <button className="flex items-center justify-center gap-3 h-14 px-8 rounded-2xl bg-white text-black hover:bg-gray-200 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] hover:scale-105 transition-all duration-300">
-                <Apple className="w-6 h-6" />
-                <div className="flex flex-col items-start">
-                  <span className="text-[10px] leading-none text-gray-600 font-medium">Baixar na</span>
-                  <span className="font-bold leading-none mt-0.5">App Store</span>
-                </div>
-              </button>
-              
-              <button className="flex items-center justify-center gap-3 h-14 px-8 rounded-2xl bg-white/5 border border-white/10 text-white hover:border-emerald-500/30 hover:bg-emerald-500/10 hover:shadow-[0_0_30px_rgba(16,185,129,0.15)] transition-all duration-300 group">
-                <Play className="w-5 h-5 text-gray-300 group-hover:text-emerald-400 transition-colors" />
-                <div className="flex flex-col items-start">
-                  <span className="text-[10px] leading-none text-gray-400 font-medium group-hover:text-emerald-200/70">Disponível no</span>
-                  <span className="font-bold leading-none mt-0.5">Google Play</span>
-                </div>
+              <button className="flex items-center justify-center gap-2 h-14 px-8 rounded-2xl bg-white/10 text-white border border-white/10 hover:bg-emerald-500/10 hover:border-emerald-500/30 hover:text-emerald-400 transition-all duration-300">
+                <Globe className="w-5 h-5" />
+                <span className="font-bold">Ver Exemplo de Site</span>
               </button>
             </div>
           </motion.div>
 
-          {/* Dual Phone Mockup */}
+          {/* Discord Panel Mockup & Web Preview */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="relative flex justify-center items-center h-[700px] mt-10 lg:mt-0"
           >
-            {/* Massive Glow behind phones */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/15 blur-[120px] rounded-full pointer-events-none" />
             
-            <div className="relative flex items-center justify-center w-full max-w-sm">
-              {/* Back Phone */}
+            <div className="relative w-full max-w-md">
+              
+              {/* Web Dashboard Preview (Background) */}
               <motion.div 
-                animate={{ y: [-8, 8, -8] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="w-[240px] h-[520px] rounded-[2.5rem] border-[6px] border-zinc-800 bg-[#0a0a0a] rotate-[-12deg] absolute -left-4 sm:left-4 shadow-2xl opacity-50 scale-90"
+                animate={{ y: [-8, 8, -8], rotate: [-5, -5, -5] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                className="absolute -top-10 -right-10 w-[350px] h-[250px] rounded-2xl border border-white/10 bg-[#0a0a0a] shadow-2xl opacity-70 overflow-hidden"
               >
-                <div className="w-full h-full rounded-[2rem] bg-gradient-to-b from-emerald-900/40 to-[#0a0a0a] p-4 flex flex-col gap-4 overflow-hidden border border-white/5">
-                  <div className="w-full h-24 rounded-xl bg-white/5 border border-white/5" />
-                  <div className="w-full h-12 rounded-xl bg-white/5 border border-white/5" />
-                  <div className="w-full h-12 rounded-xl bg-white/5 border border-white/5" />
-                  <div className="w-full h-12 rounded-xl bg-white/5 border border-white/5" />
+                {/* Browser Header */}
+                <div className="h-8 bg-[#1a1a1a] border-b border-white/5 flex items-center px-4 gap-2">
+                  <div className="flex gap-1.5">
+                    <div className="w-2.5 h-2.5 rounded-full bg-red-500" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-amber-500" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-green-500" />
+                  </div>
+                  <div className="mx-auto h-4 w-32 bg-white/5 rounded" />
+                </div>
+                {/* Web Content */}
+                <div className="p-4 flex flex-col gap-4">
+                  <div className="flex gap-4">
+                    <div className="w-16 h-16 rounded-xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center">
+                       <Activity className="w-6 h-6 text-emerald-400" />
+                    </div>
+                    <div className="flex-1 flex flex-col gap-2 justify-center">
+                      <div className="h-4 w-1/2 bg-white/10 rounded" />
+                      <div className="h-3 w-3/4 bg-white/5 rounded" />
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    <div className="h-16 bg-white/5 rounded-lg" />
+                    <div className="h-16 bg-white/5 rounded-lg" />
+                  </div>
+                  <div className="h-20 bg-white/5 rounded-lg" />
                 </div>
               </motion.div>
               
-              {/* Front Phone */}
+              {/* Discord Bot Panel (Foreground) */}
               <motion.div 
                 animate={{ y: [5, -8, 5] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="w-[290px] h-[620px] rounded-[3rem] border-[8px] border-zinc-700 bg-black rotate-[5deg] relative z-10 shadow-2xl shadow-emerald-500/20 overflow-hidden ml-16"
+                className="relative z-10 w-full rounded-xl border border-white/10 bg-[#313338] shadow-2xl overflow-hidden p-4"
               >
-                {/* Notch */}
-                <div className="absolute top-0 inset-x-0 h-7 flex justify-center z-30">
-                  <div className="w-28 h-7 bg-zinc-700 rounded-b-xl" />
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-gray-400 text-sm font-semibold">Painel de Controle - Dono</span>
                 </div>
-                
-                {/* Screen Content */}
-                <div className="w-full h-full relative border border-white/5 rounded-[2.2rem] overflow-hidden">
-                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-900/40 via-[#0a0a0a] to-[#0a0a0a]" />
-                  
-                  <div className="relative z-10 pt-20 p-6 flex flex-col items-center h-full">
-                    
-                    <div className="relative mb-6 mt-10">
-                      <div className="absolute inset-0 bg-emerald-500/30 rounded-full animate-pulse-ring" />
-                      <div className="w-20 h-20 rounded-full bg-emerald-500/15 border border-emerald-500/40 shadow-[0_0_30px_rgba(16,185,129,0.4)] flex items-center justify-center relative z-10 animate-glow-pulse">
-                        <Shield className="w-10 h-10 text-emerald-400" />
-                      </div>
+
+                <div className="bg-[#2b2d31] rounded-lg border-l-4 border-emerald-500 p-4">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center border border-emerald-500/30">
+                       <Settings className="w-5 h-5 text-emerald-400" />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-bold">NSSA Bot — Central de Gestão</h4>
+                      <p className="text-[11px] text-gray-400 mt-0.5">Clique nos botões abaixo para gerenciar o bot.</p>
+                    </div>
+                  </div>
+
+                  {/* Buttons Grid */}
+                  <div className="flex flex-col gap-2 mt-4">
+                    <div className="grid grid-cols-2 gap-2">
+                      <button className="flex items-center justify-center gap-2 py-2 bg-[#4e5058] hover:bg-[#5865f2] text-white rounded-[4px] text-[13px] font-medium transition-colors">
+                        <Terminal className="w-4 h-4" /> Configurar Bot
+                      </button>
+                      <button className="flex items-center justify-center gap-2 py-2 bg-[#4e5058] hover:bg-[#5865f2] text-white rounded-[4px] text-[13px] font-medium transition-colors">
+                        <Wallet className="w-4 h-4" /> Dar Moedas
+                      </button>
                     </div>
                     
-                    <h3 className="text-xl font-display font-bold mb-2 text-white">Acesso Aprovado</h3>
-                    <p className="text-sm text-gray-400 text-center mb-auto">Bem-vindo de volta, LOUD Admin</p>
+                    <div className="grid grid-cols-2 gap-2">
+                      <button className="flex items-center justify-center gap-2 py-2 bg-[#4e5058] hover:bg-[#5865f2] text-white rounded-[4px] text-[13px] font-medium transition-colors">
+                        <Users className="w-4 h-4" /> Mediadores
+                      </button>
+                      <button className="flex items-center justify-center gap-2 py-2 bg-[#4e5058] hover:bg-[#5865f2] text-white rounded-[4px] text-[13px] font-medium transition-colors">
+                        <History className="w-4 h-4" /> Extrair Logs
+                      </button>
+                    </div>
+
+                    <button className="w-full flex items-center justify-center gap-2 py-2 bg-[#248046] hover:bg-[#1a6334] text-white rounded-[4px] text-[13px] font-medium transition-colors mt-1">
+                      👑 Ver Pacote de Salas (PIX)
+                    </button>
                     
-                    {/* Animated Notification Card */}
-                    <motion.div 
-                      initial={{ y: 50, opacity: 0, scale: 0.9 }}
-                      whileInView={{ y: 0, opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.5, duration: 0.6, type: "spring" }}
-                      className="w-full glass-card p-5 rounded-2xl mb-4 border-emerald-500/20 shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
-                    >
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
-                        <div className="text-xs text-amber-400/80 font-bold uppercase tracking-wider">Pendente de aprovação</div>
-                      </div>
-                      <div className="text-xl font-display font-bold text-white mb-4">Saque R$ 4.500,00</div>
-                      <div className="flex gap-2">
-                        <button className="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-green-500 text-black font-bold text-sm shadow-[0_0_15px_rgba(16,185,129,0.3)] hover:brightness-110 transition-all">
-                          Aprovar
-                        </button>
-                        <button className="flex-1 py-2.5 rounded-xl bg-white/10 text-white font-bold text-sm border border-white/10 hover:bg-white/20 transition-all">
-                          Recusar
-                        </button>
-                      </div>
-                    </motion.div>
+                    <button className="w-full flex items-center justify-center gap-2 py-2 bg-[#da373c] hover:bg-[#a1282b] text-white rounded-[4px] text-[13px] font-medium transition-colors mt-1">
+                      ⚠️ Blacklist Global
+                    </button>
                   </div>
                 </div>
               </motion.div>

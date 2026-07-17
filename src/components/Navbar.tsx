@@ -1,12 +1,12 @@
 import { motion, AnimatePresence } from "motion/react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Bot } from "lucide-react";
 import { useState, useEffect, MouseEvent } from "react";
 
 const NAV_LINKS = [
   { label: 'Recursos', href: '#recursos', id: 'recursos' },
-  { label: 'Jogos', href: '#jogos', id: 'jogos' },
-  { label: 'O App', href: '#o-app', id: 'o-app' },
-  { label: 'VIP', href: '#vip', id: 'vip' }
+  { label: 'Modos', href: '#modos', id: 'modos' },
+  { label: 'Pacotes', href: '#pacotes', id: 'pacotes' },
+  { label: 'Painéis', href: '#paineis', id: 'paineis' }
 ];
 
 export function Navbar() {
@@ -14,7 +14,6 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
 
-  // Handle Scroll
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -23,7 +22,6 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Intersection Observer for Active Section
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -35,12 +33,10 @@ export function Navbar() {
       },
       { rootMargin: '-50% 0px -50% 0px' }
     );
-
     NAV_LINKS.forEach(({ id }) => {
       const element = document.getElementById(id);
       if (element) observer.observe(element);
     });
-
     return () => observer.disconnect();
   }, []);
 
@@ -54,40 +50,37 @@ export function Navbar() {
   };
 
   return (
-    <motion.nav 
+    <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-xl ${
-        isScrolled 
-          ? 'bg-[#050505]/95 border-b border-emerald-500/10 shadow-lg shadow-black/50' 
+        isScrolled
+          ? 'bg-[#050505]/95 border-b border-emerald-500/10 shadow-lg shadow-black/50'
           : 'bg-[#050505]/70 border-b border-white/5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        {/* Logo */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           className="flex flex-col cursor-pointer"
-          onClick={(e) => handleScrollTo(e as any, '#root')}
         >
           <div className="text-2xl font-black italic tracking-tighter text-white flex items-center font-display">
             N<span className="text-emerald-500" style={{ textShadow: '0 0 20px rgba(16,185,129,0.5)' }}>SS</span>A
           </div>
-          <div className="text-[8px] tracking-[0.2em] text-gray-400 mt-0.5 uppercase">E-SPORTS APP</div>
+          <div className="text-[8px] tracking-[0.2em] text-gray-400 mt-0.5 uppercase">Discord Bot</div>
         </motion.div>
 
-        {/* Desktop Menu */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           className="hidden md:flex items-center gap-8"
         >
           {NAV_LINKS.map(({ label, href, id }) => (
-            <a 
-              key={id} 
-              href={href} 
+            <a
+              key={id}
+              href={href}
               onClick={(e) => handleScrollTo(e, href)}
               className={`text-sm font-medium transition-colors hover-underline pb-1 ${
                 activeSection === id ? 'text-emerald-400' : 'text-gray-400 hover:text-white'
@@ -96,13 +89,13 @@ export function Navbar() {
               {label}
             </a>
           ))}
-          <button className="h-10 px-6 rounded-full bg-gradient-to-r from-emerald-500 to-green-500 text-black font-bold text-sm hover:brightness-110 transition-all animate-glow-pulse">
-            Acessar Sistema
+          <button className="h-10 px-6 rounded-full bg-gradient-to-r from-emerald-500 to-green-500 text-black font-bold text-sm hover:brightness-110 transition-all animate-glow-pulse flex items-center gap-2">
+            <Bot className="w-4 h-4" />
+            Adicionar ao Discord
           </button>
         </motion.div>
 
-        {/* Mobile Toggle */}
-        <button 
+        <button
           className="md:hidden text-white p-2 hover:bg-white/5 rounded-lg transition-colors"
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -110,10 +103,9 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -121,8 +113,8 @@ export function Navbar() {
           >
             <div className="px-6 py-4 flex flex-col gap-4">
               {NAV_LINKS.map(({ label, href, id }) => (
-                <a 
-                  key={id} 
+                <a
+                  key={id}
                   href={href}
                   onClick={(e) => handleScrollTo(e, href)}
                   className={`text-sm font-medium py-2 border-b border-white/5 transition-colors ${
@@ -132,8 +124,9 @@ export function Navbar() {
                   {label}
                 </a>
               ))}
-              <button className="h-12 w-full rounded-full bg-gradient-to-r from-emerald-500 to-green-500 text-black font-bold text-sm hover:brightness-110 transition-all mt-4 animate-glow-pulse shadow-[0_0_20px_rgba(16,185,129,0.3)]">
-                Acessar Sistema
+              <button className="h-12 w-full rounded-full bg-gradient-to-r from-emerald-500 to-green-500 text-black font-bold text-sm mt-4 animate-glow-pulse flex items-center justify-center gap-2">
+                <Bot className="w-4 h-4" />
+                Adicionar ao Discord
               </button>
             </div>
           </motion.div>
