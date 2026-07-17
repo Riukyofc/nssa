@@ -89,10 +89,10 @@ export function Navbar() {
               {label}
             </a>
           ))}
-          <button className="h-10 px-6 rounded-full bg-gradient-to-r from-emerald-500 to-green-500 text-black font-bold text-sm hover:brightness-110 transition-all animate-glow-pulse flex items-center gap-2">
+          <a href="https://discord.gg/6vV6GJszww" target="_blank" rel="noopener noreferrer" className="h-10 px-6 rounded-full bg-gradient-to-r from-emerald-500 to-green-500 text-black font-bold text-sm hover:brightness-110 transition-all animate-glow-pulse flex items-center gap-2">
             <Bot className="w-4 h-4" />
             Adicionar ao Discord
-          </button>
+          </a>
         </motion.div>
 
         <button
@@ -124,10 +124,10 @@ export function Navbar() {
                   {label}
                 </a>
               ))}
-              <button className="h-12 w-full rounded-full bg-gradient-to-r from-emerald-500 to-green-500 text-black font-bold text-sm mt-4 animate-glow-pulse flex items-center justify-center gap-2">
+              <a href="https://discord.gg/6vV6GJszww" target="_blank" rel="noopener noreferrer" className="h-12 w-full rounded-full bg-gradient-to-r from-emerald-500 to-green-500 text-black font-bold text-sm mt-4 animate-glow-pulse flex items-center justify-center gap-2">
                 <Bot className="w-4 h-4" />
                 Adicionar ao Discord
-              </button>
+              </a>
             </div>
           </motion.div>
         )}

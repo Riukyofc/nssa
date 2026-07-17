@@ -35,7 +35,7 @@ export function Footer() {
               <ul className="flex flex-col gap-4">
                 {['Recursos', 'Modos suportados', 'Pacotes de Salas', 'Sites Exclusivos'].map(item => (
                   <li key={item}>
-                    <a href="#" className="text-sm text-gray-500 hover:text-emerald-400 transition-colors hover-underline pb-1 w-fit">
+                    <a href="https://discord.gg/6vV6GJszww" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-emerald-400 transition-colors hover-underline pb-1 w-fit">
                       {item}
                     </a>
                   </li>
@@ -49,7 +49,7 @@ export function Footer() {
               <ul className="flex flex-col gap-4">
                 {['Termos de Uso', 'Privacidade', 'Reembolsos'].map(item => (
                   <li key={item}>
-                    <a href="#" className="text-sm text-gray-500 hover:text-emerald-400 transition-colors hover-underline pb-1 w-fit">
+                    <a href="https://discord.gg/6vV6GJszww" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-emerald-400 transition-colors hover-underline pb-1 w-fit">
                       {item}
                     </a>
                   </li>
@@ -61,13 +61,13 @@ export function Footer() {
             <div className="md:col-span-3">
               <h4 className="font-bold mb-6 text-white text-sm uppercase tracking-wider">Suporte</h4>
               <div className="flex gap-4">
-                <a href="#" className="w-10 h-10 rounded-xl bg-white/5 border border-white/[0.06] flex items-center justify-center text-gray-400 hover:text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
+                <a href="https://discord.gg/6vV6GJszww" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-white/5 border border-white/[0.06] flex items-center justify-center text-gray-400 hover:text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
                   <Shield className="w-5 h-5" />
                 </a>
-                <a href="#" className="w-10 h-10 rounded-xl bg-white/5 border border-white/[0.06] flex items-center justify-center text-gray-400 hover:text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
+                <a href="https://discord.gg/6vV6GJszww" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-white/5 border border-white/[0.06] flex items-center justify-center text-gray-400 hover:text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
                   <ShoppingBag className="w-5 h-5" />
                 </a>
-                <a href="#" className="w-10 h-10 rounded-xl bg-white/5 border border-white/[0.06] flex items-center justify-center text-gray-400 hover:text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
+                <a href="https://discord.gg/6vV6GJszww" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-white/5 border border-white/[0.06] flex items-center justify-center text-gray-400 hover:text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
                   <MessageCircle className="w-5 h-5" />
                 </a>
               </div>

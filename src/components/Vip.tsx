@@ -97,13 +97,13 @@ export function Vip() {
               )}
 
               <div className="mt-auto pt-4 w-full">
-                <button className={`w-full py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
+                <a href="https://discord.gg/6vV6GJszww" target="_blank" rel="noopener noreferrer" className={`w-full flex items-center justify-center py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
                   pkg.popular
                     ? 'bg-emerald-500 text-black hover:bg-emerald-400'
                     : 'bg-white/5 text-white border border-white/10 hover:bg-emerald-500/10 hover:border-emerald-500/30 hover:text-emerald-400'
                 }`}>
                   Comprar
-                </button>
+                </a>
               </div>
             </motion.div>
           ))}
@@ -140,10 +140,10 @@ export function Vip() {
         >
           <div className="relative inline-flex group">
             <span className="absolute inset-0 rounded-full animate-pulse-ring bg-emerald-500/20" />
-            <button className="relative h-14 px-10 rounded-full bg-gradient-to-r from-emerald-500 to-green-500 text-black font-bold flex items-center justify-center gap-2 hover:brightness-110 transition-all animate-glow-pulse z-10">
+            <a href="https://discord.gg/6vV6GJszww" target="_blank" rel="noopener noreferrer" className="relative h-14 px-10 rounded-full bg-gradient-to-r from-emerald-500 to-green-500 text-black font-bold flex items-center justify-center gap-2 hover:brightness-110 transition-all animate-glow-pulse z-10">
               Começar com Starter — R$ 4,00
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </a>
           </div>
         </motion.div>
       </div>
