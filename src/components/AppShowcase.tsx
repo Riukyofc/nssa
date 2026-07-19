@@ -50,7 +50,7 @@ export function AppShowcase() {
             </ul>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <a href="https://discord.gg/6vV6GJszww" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 h-14 px-8 rounded-2xl bg-white/10 text-white border border-white/10 hover:bg-emerald-500/10 hover:border-emerald-500/30 hover:text-emerald-400 transition-all duration-300">
+              <a href="https://discord.gg/vZqXX59NsA" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 h-14 px-8 rounded-2xl bg-white/10 text-white border border-white/10 hover:bg-emerald-500/10 hover:border-emerald-500/30 hover:text-emerald-400 transition-all duration-300">
                 <Globe className="w-5 h-5" />
                 <span className="font-bold">Ver Exemplo de Site</span>
               </a>

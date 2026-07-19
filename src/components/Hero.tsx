@@ -89,12 +89,12 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <div className="relative inline-flex group">
               <span className="absolute inset-0 rounded-full animate-pulse-ring bg-emerald-500/30" />
-              <a href="https://discord.gg/6vV6GJszww" target="_blank" rel="noopener noreferrer" className="relative h-14 px-8 w-full sm:w-auto rounded-full bg-gradient-to-r from-emerald-500 to-green-500 text-black font-bold flex items-center justify-center gap-2 hover:shadow-[0_0_30px_rgba(16,185,129,0.4)] transition-all z-10 hover:scale-105">
+              <a href="https://discord.gg/vZqXX59NsA" target="_blank" rel="noopener noreferrer" className="relative h-14 px-8 w-full sm:w-auto rounded-full bg-gradient-to-r from-emerald-500 to-green-500 text-black font-bold flex items-center justify-center gap-2 hover:shadow-[0_0_30px_rgba(16,185,129,0.4)] transition-all z-10 hover:scale-105">
                 <Bot className="w-5 h-5" />
                 Adicionar ao Discord
               </a>
             </div>
-            <a href="https://discord.gg/6vV6GJszww" target="_blank" rel="noopener noreferrer" className="h-14 px-8 rounded-full border border-white/10 bg-white/5 text-white font-medium flex items-center justify-center hover:bg-white/10 hover:border-emerald-500/30 transition-all hover:shadow-[0_0_20px_rgba(16,185,129,0.15)]">
+            <a href="https://discord.gg/vZqXX59NsA" target="_blank" rel="noopener noreferrer" className="h-14 px-8 rounded-full border border-white/10 bg-white/5 text-white font-medium flex items-center justify-center hover:bg-white/10 hover:border-emerald-500/30 transition-all hover:shadow-[0_0_20px_rgba(16,185,129,0.15)]">
               Ver Comandos
             </a>
           </div>
